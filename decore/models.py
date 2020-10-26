@@ -80,3 +80,29 @@ class Slug(AbstractModel):
         if title:
             self.slug = slugify(title)
             self.save()
+
+
+class Hidden(AbstractModel):
+    """
+    Abstact model that can be inhertied to have hide functionality
+    in a model using is_hidden field.
+
+    Use .hide() to hide and .unhide() to unhide an object.
+    """
+    is_hidden = models.BooleanField(default=False, db_index=True)
+
+    def hide(self):
+        """
+        hides the object if its not hidden
+        """
+        if not self.is_hidden:
+            self.is_hidden = True
+            self.save()
+
+    def unhide(self):
+        """
+        unhide the objects if its hidden
+        """
+        if self.is_hidden:
+            self.is_hidden = False
+            self.save()
