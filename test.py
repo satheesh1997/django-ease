@@ -10,15 +10,8 @@ def install_decore():
         sys.exit(exit_code)
 
 
-def run_migrations():
-    exit_code = call(['python', 'manage.py', 'migrate'], cwd='./tests')
-
-    if exit_code != 0:
-        sys.exit(exit_code)
-
-
 def run_tests():
-    exit_code = call(['python', 'manage.py', 'test', 'tests'], cwd='./tests')
+    exit_code = call(['python', 'manage.py', 'test', 'tests', '-v', '2'], cwd='./tests')
 
     if exit_code != 0:
         sys.exit(exit_code)
@@ -26,5 +19,4 @@ def run_tests():
 
 if __name__ == '__main__':
     install_decore()
-    run_migrations()
     run_tests()

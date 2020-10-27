@@ -8,7 +8,7 @@ class HiddenModel(models.Hidden):
     pass
 
 
-class  SlugModel(models.Slug):
+class SlugModel(models.Slug):
     pass
 
 
