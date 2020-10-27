@@ -1,2 +1,2 @@
-doc:
-	rm -rf documentation && cd docs && make html && sphinx-build -b rinoh source _build/rinoh && cp -r build/html ../documentation
+docs:
+	rm -rf docs && cd docs_src && make html && sphinx-build -b rinoh source _build/rinoh && cp -r build/html ../docs

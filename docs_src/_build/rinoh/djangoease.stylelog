@@ -1,0 +1,488 @@
+---------------------------------- page 1 ----------------------------------
+#### DownExpandingContainer('title')
+  StaticGroupedFlowables()
+    Paragraph('Django Ease', style='title page title')
+         > (0,0,1,0,2) title page title
+           (0,0,0,0,2) body
+      SingleStyledText('Django Ease')
+    Paragraph('Release 1.0.0', style='title page subtitle')
+         > (0,0,1,0,2) title page subtitle
+           (0,0,0,0,2) body
+      SingleStyledText('Release 1.0.0')
+    Paragraph('Satheesh Kumar', style='title page author')
+         > (0,0,1,0,2) title page author
+           (0,0,0,0,2) body
+      SingleStyledText('Satheesh Kumar')
+    Paragraph('Oct 27, 2020', style='title page date')
+         > (0,0,1,0,2) title page date
+           (0,0,0,0,2) body
+      SingleStyledText('Oct 27, 2020')
+---------------------------------- page i ----------------------------------
+#### FootnoteContainer('footnotes')
+  StaticGroupedFlowables()
+#### DownExpandingContainer('floats')
+  StaticGroupedFlowables()
+#### FlowablesContainer('chapter title')
+  Paragraph('Table of Contents', style='front matter section title')
+       > (0,0,1,0,2) front matter section title
+         (0,0,0,0,2) body
+    Field('Table of Contents')
+      SingleStyledText('Table of Contents')
+#### ChainedContainer('column1')
+  StaticGroupedFlowables()
+    TableOfContentsSection(style='table of contents')
+         > (0,0,1,0,1) table of contents section
+           (0,0,0,1,1) chapter
+      TableOfContents()   table of contents
+           > (0,0,0,0,2) table of contents
+        TableOfContentsEntry('1	Overview	3')
+             > (0,0,0,1,2) toc level 1
+            MixedStyledText('1	Overview	3')
+              ReferenceField('1')
+                   x (0,0,0,1,3) toc linked reference
+                   > (0,0,0,1,1) linked reference
+                SingleStyledText('1')
+              Tab('	')
+              ReferenceField('Overview')
+                   x (0,0,0,1,3) toc linked reference
+                   > (0,0,0,1,1) linked reference
+                SingleStyledText('Overview')
+              Tab('	')
+              ReferenceField('3')
+                   x (0,0,0,1,3) toc linked reference
+                   > (0,0,0,1,1) linked reference
+                SingleStyledText('3')
+        TableOfContentsEntry('1.1	Supported versions	3')
+             > (0,0,0,1,2) toc level 2
+            MixedStyledText('1.1	Supported versions	3')
+              ReferenceField('1.1')
+                   x (0,0,0,1,3) toc linked reference
+                   > (0,0,0,1,1) linked reference
+                SingleStyledText('1.1')
+              Tab('	')
+              ReferenceField('Supported versions')
+                   x (0,0,0,1,3) toc linked reference
+                   > (0,0,0,1,1) linked reference
+                SingleStyledText('Supported versions')
+              Tab('	')
+              ReferenceField('3')
+                   x (0,0,0,1,3) toc linked reference
+                   > (0,0,0,1,1) linked reference
+                SingleStyledText('3')
+        TableOfContentsEntry('1.2	Package installation	3')
+             > (0,0,0,1,2) toc level 2
+            MixedStyledText('1.2	Package installation	3')
+              ReferenceField('1.2')
+                   x (0,0,0,1,3) toc linked reference
+                   > (0,0,0,1,1) linked reference
+                SingleStyledText('1.2')
+              Tab('	')
+              ReferenceField('Package installation')
+                   x (0,0,0,1,3) toc linked reference
+                   > (0,0,0,1,1) linked reference
+                SingleStyledText('Package installation')
+              Tab('	')
+              ReferenceField('3')
+                   x (0,0,0,1,3) toc linked reference
+                   > (0,0,0,1,1) linked reference
+                SingleStyledText('3')
+#### DownExpandingContainer('footer')
+  StaticGroupedFlowables()
+    Footer('		i')
+         > (0,0,0,0,2) footer
+           (0,0,0,0,1) body
+      MixedStyledText('		i')
+        Tab('	')
+        Tab('	')
+        Field('i')
+          SingleStyledText('i')
+---------------------------------- page 1 ----------------------------------
+#### FootnoteContainer('footnotes')
+  StaticGroupedFlowables()
+#### DownExpandingContainer('floats')
+  StaticGroupedFlowables()
+#### ChainedContainer('column1')
+  StaticGroupedFlowables()
+    DocumentTree()
+      Paragraph('Django Ease is a python package ...')   /home/venom/SatheeshKumar/Django-Easy/docs_src/source/index.rst:8 <paragraph>
+           > (0,0,0,0,2) body
+        MixedStyledText('Django Ease is a python package ...')
+          SingleStyledText('Django Ease is a python package ...')
+#### DownExpandingContainer('footer')
+  StaticGroupedFlowables()
+    Footer('		1')
+         > (0,0,0,0,2) footer
+           (0,0,0,0,1) body
+      MixedStyledText('		1')
+        Tab('	')
+        Tab('	')
+        Field('1')
+          SingleStyledText('1')
+---------------------------------- page 2 ----------------------------------
+#### FootnoteContainer('footnotes')
+  StaticGroupedFlowables()
+#### DownExpandingContainer('floats')
+  StaticGroupedFlowables()
+#### ChainedContainer('column1')
+  (continued) StaticGroupedFlowables()
+    (continued) DocumentTree()
+#### UpExpandingContainer('header')
+  StaticGroupedFlowables()
+    Header('Django Ease, Release 1.0.0')
+         > (0,0,0,0,2) header
+           (0,0,0,0,1) body
+      MixedStyledText('Django Ease, Release 1.0.0')
+        Field('Django Ease')
+          SingleStyledText('Django Ease')
+        SingleStyledText(', ')
+        Field('Release 1.0.0')
+          SingleStyledText('Release 1.0.0')
+#### DownExpandingContainer('footer')
+  StaticGroupedFlowables()
+    Footer('2		Chapter ​.  ​')
+         > (0,0,0,0,2) footer
+           (0,0,0,0,1) body
+      MixedStyledText('2		Chapter ​.  ​')
+        Field('2')
+          SingleStyledText('2')
+        Tab('	')
+        Tab('	')
+        StringField('Chapter')
+          SingleStyledText('Chapter')
+        SingleStyledText(' ')
+        Field('​')
+          SingleStyledText('​')
+        SingleStyledText('.  ')
+        Field('​')
+          SingleStyledText('​')
+---------------------------------- page 3 ----------------------------------
+#### FootnoteContainer('footnotes')
+  StaticGroupedFlowables()
+#### DownExpandingContainer('floats')
+  StaticGroupedFlowables()
+#### FlowablesContainer('chapter title')
+  Paragraph('Chapter 1', style='body matter chapter label')
+       > (0,0,1,0,2) body matter chapter label
+         (0,0,0,0,2) body
+    MixedStyledText('Chapter 1')
+      MixedStyledText('Chapter ')
+        StringField('Chapter')
+          SingleStyledText('Chapter')
+        SingleStyledText(' ')
+      Field('1', style='number')
+           > (0,0,2,0,3) body matter chapter number
+        SingleStyledText('1')
+  Paragraph('Overview', style='body matter chapter title')
+       > (0,0,1,0,2) body matter chapter title
+         (0,0,0,0,2) body
+    Field('Overview')
+      SingleStyledText('Overview')
+#### ChainedContainer('column1')
+  (continued) StaticGroupedFlowables()
+    (continued) DocumentTree()
+      StaticGroupedFlowables()   /home/venom/SatheeshKumar/Django-Easy/docs_src/source/index.rst:0 <compound>
+        StaticGroupedFlowables(id='%overview')   None:None <start_of_file>
+          Section(id='%overview#overview')   /home/venom/SatheeshKumar/Django-Easy/docs_src/source/overview.rst:3 <section>
+               > (0,0,0,1,2) chapter
+            Paragraph('The decore package should be ins...')   /home/venom/SatheeshKumar/Django-Easy/docs_src/source/overview.rst:4 <paragraph>
+                 > (0,0,0,0,2) body
+              MixedStyledText('The decore package should be ins...')
+                SingleStyledText('The decore package should be ins...')
+            Section(id='%overview#supported-versions')   /home/venom/SatheeshKumar/Django-Easy/docs_src/source/overview.rst:8 <section>
+              Heading('1.1 Supported versions')   /home/venom/SatheeshKumar/Django-Easy/docs_src/source/overview.rst:8 <title>
+                   > (0,0,0,1,2) heading level 2
+                     (0,0,0,0,2) other heading levels
+                  MixedStyledText('1.1 Supported versions')
+                    SingleStyledText('1.1')
+                    SingleStyledText(' ')
+                    SingleStyledText('Supported versions')
+              Paragraph('The following python versions ar...')   /home/venom/SatheeshKumar/Django-Easy/docs_src/source/overview.rst:9 <paragraph>
+                   > (0,0,0,0,2) body
+                MixedStyledText('The following python versions ar...')
+                  SingleStyledText('The following python versions ar...')
+              List(style='bulleted')   /home/venom/SatheeshKumar/Django-Easy/docs_src/source/overview.rst:11 <bullet_list>
+                   > (0,0,1,0,2) bulleted list
+                ListItem()
+                     x (0,0,1,0,4) bulleted list item
+                     > fallback to default style
+                  ListItemLabel('•')
+                       > (0,0,1,0,6) bulleted list item label
+                         (0,0,0,0,2) list item label
+                      MixedStyledText('•')
+                        SingleStyledText('')
+                        SingleStyledText('•')
+                        SingleStyledText('')
+                  StaticGroupedFlowables()   /home/venom/SatheeshKumar/Django-Easy/docs_src/source/overview.rst:None <list_item>
+                       > (0,0,0,0,3) list item body
+                    Paragraph('3.6')   /home/venom/SatheeshKumar/Django-Easy/docs_src/source/overview.rst:11 <paragraph>
+                         > (0,0,0,0,5) list item paragraph
+                           (0,0,0,0,2) body
+                      MixedStyledText('3.6')
+                        SingleStyledText('3.6')
+                ListItem()
+                     x (0,0,1,0,4) bulleted list item
+                     > fallback to default style
+                  ListItemLabel('•')
+                       > (0,0,1,0,6) bulleted list item label
+                         (0,0,0,0,2) list item label
+                      MixedStyledText('•')
+                        SingleStyledText('')
+                        SingleStyledText('•')
+                        SingleStyledText('')
+                  StaticGroupedFlowables()   /home/venom/SatheeshKumar/Django-Easy/docs_src/source/overview.rst:None <list_item>
+                       > (0,0,0,0,3) list item body
+                    Paragraph('3.7')   /home/venom/SatheeshKumar/Django-Easy/docs_src/source/overview.rst:12 <paragraph>
+                         > (0,0,0,0,5) list item paragraph
+                           (0,0,0,0,2) body
+                      MixedStyledText('3.7')
+                        SingleStyledText('3.7')
+                ListItem()
+                     x (0,0,1,0,4) bulleted list item
+                     > fallback to default style
+                  ListItemLabel('•')
+                       > (0,0,1,0,6) bulleted list item label
+                         (0,0,0,0,2) list item label
+                      MixedStyledText('•')
+                        SingleStyledText('')
+                        SingleStyledText('•')
+                        SingleStyledText('')
+                  StaticGroupedFlowables()   /home/venom/SatheeshKumar/Django-Easy/docs_src/source/overview.rst:None <list_item>
+                       > (0,0,0,0,3) list item body
+                    Paragraph('3.8')   /home/venom/SatheeshKumar/Django-Easy/docs_src/source/overview.rst:13 <paragraph>
+                         > (0,0,0,0,5) list item paragraph
+                           (0,0,0,0,2) body
+                      MixedStyledText('3.8')
+                        SingleStyledText('3.8')
+              Paragraph('The below are the Django version...')   /home/venom/SatheeshKumar/Django-Easy/docs_src/source/overview.rst:15 <paragraph>
+                   > (0,0,0,0,2) body
+                MixedStyledText('The below are the Django version...')
+                  SingleStyledText('The below are the Django version...')
+              List(style='bulleted')   /home/venom/SatheeshKumar/Django-Easy/docs_src/source/overview.rst:17 <bullet_list>
+                   > (0,0,1,0,2) bulleted list
+                ListItem()
+                     x (0,0,1,0,4) bulleted list item
+                     > fallback to default style
+                  ListItemLabel('•')
+                       > (0,0,1,0,6) bulleted list item label
+                         (0,0,0,0,2) list item label
+                      MixedStyledText('•')
+                        SingleStyledText('')
+                        SingleStyledText('•')
+                        SingleStyledText('')
+                  StaticGroupedFlowables()   /home/venom/SatheeshKumar/Django-Easy/docs_src/source/overview.rst:None <list_item>
+                       > (0,0,0,0,3) list item body
+                    Paragraph('2.2')   /home/venom/SatheeshKumar/Django-Easy/docs_src/source/overview.rst:17 <paragraph>
+                         > (0,0,0,0,5) list item paragraph
+                           (0,0,0,0,2) body
+                      MixedStyledText('2.2')
+                        SingleStyledText('2.2')
+                ListItem()
+                     x (0,0,1,0,4) bulleted list item
+                     > fallback to default style
+                  ListItemLabel('•')
+                       > (0,0,1,0,6) bulleted list item label
+                         (0,0,0,0,2) list item label
+                      MixedStyledText('•')
+                        SingleStyledText('')
+                        SingleStyledText('•')
+                        SingleStyledText('')
+                  StaticGroupedFlowables()   /home/venom/SatheeshKumar/Django-Easy/docs_src/source/overview.rst:None <list_item>
+                       > (0,0,0,0,3) list item body
+                    Paragraph('3.3')   /home/venom/SatheeshKumar/Django-Easy/docs_src/source/overview.rst:18 <paragraph>
+                         > (0,0,0,0,5) list item paragraph
+                           (0,0,0,0,2) body
+                      MixedStyledText('3.3')
+                        SingleStyledText('3.3')
+            Section(id='%overview#package-installation')   /home/venom/SatheeshKumar/Django-Easy/docs_src/source/overview.rst:21 <section>
+              Heading('1.2 Package installation')   /home/venom/SatheeshKumar/Django-Easy/docs_src/source/overview.rst:21 <title>
+                   > (0,0,0,1,2) heading level 2
+                     (0,0,0,0,2) other heading levels
+                  MixedStyledText('1.2 Package installation')
+                    SingleStyledText('1.2')
+                    SingleStyledText(' ')
+                    SingleStyledText('Package installation')
+              Paragraph('decore package can be installed ...')   /home/venom/SatheeshKumar/Django-Easy/docs_src/source/overview.rst:22 <paragraph>
+                   > (0,0,0,0,2) body
+                MixedStyledText('decore package can be installed ...')
+                  MixedStyledText('decore', style='strong')   None:None <strong>
+                       > (0,0,1,0,1) strong
+                    SingleStyledText('decore')
+                  SingleStyledText(' package can be installed from t...')
+              CodeBlock('pip install django-easy\n')   /home/venom/SatheeshKumar/Django-Easy/docs_src/source/overview.rst:24 <literal_block>
+                   > (1,0,0,0,2) code block
+                     (0,0,0,0,1) body
+                Token('pip install django-easy\n', type=Token.Text)
+                     > (0,0,0,1,2) (pygments)Token.Text
+              Paragraph('Once the above command is comple...')   /home/venom/SatheeshKumar/Django-Easy/docs_src/source/overview.rst:28 <paragraph>
+                   > (0,0,0,0,2) body
+                MixedStyledText('Once the above command is comple...')
+                  SingleStyledText('Once the above command is comple...')
+              CodeBlock('python -m "import decore"\n')   /home/venom/SatheeshKumar/Django-Easy/docs_src/source/overview.rst:30 <literal_block>
+                   > (1,0,0,0,2) code block
+                     (0,0,0,0,1) body
+                Token('python -m ', type=Token.Text)
+                     > (0,0,0,1,2) (pygments)Token.Text
+                Token('"import decore"', type=Token.Literal.String.Double)
+                     > (0,0,0,1,2) (pygments)Token.Literal.String.Double
+                Token('\n', type=Token.Text)
+                     > (0,0,0,1,2) (pygments)Token.Text
+              Paragraph('the above command should give th...')   /home/venom/SatheeshKumar/Django-Easy/docs_src/source/overview.rst:34 <paragraph>
+                   > (0,0,0,0,2) body
+                MixedStyledText('the above command should give th...')
+                  SingleStyledText('the above command should give th...')
+              CodeBlock('django.core.exceptions.Improperl...')   /home/venom/SatheeshKumar/Django-Easy/docs_src/source/overview.rst:36 <literal_block>
+                   > (1,0,0,0,2) code block
+                     (0,0,0,0,1) body
+                Token('django', type=Token.Name)
+                     > (0,0,0,1,2) (pygments)Token.Name
+                Token('.', type=Token.Operator)
+                     > (0,0,0,1,2) (pygments)Token.Operator
+                Token('core', type=Token.Name)
+                     > (0,0,0,1,2) (pygments)Token.Name
+                Token('.', type=Token.Operator)
+                     > (0,0,0,1,2) (pygments)Token.Operator
+                Token('exceptions', type=Token.Name)
+                     > (0,0,0,1,2) (pygments)Token.Name
+                Token('.', type=Token.Operator)
+                     > (0,0,0,1,2) (pygments)Token.Operator
+                Token('ImproperlyConfigured', type=Token.Name)
+                     > (0,0,0,1,2) (pygments)Token.Name
+                Token(':', type=Token.Punctuation)
+                     > (0,0,0,1,2) (pygments)Token.Punctuation
+                Token(' ', type=Token.Text)
+                     > (0,0,0,1,2) (pygments)Token.Text
+                Token('Requested', type=Token.Name)
+                     > (0,0,0,1,2) (pygments)Token.Name
+                Token(' ', type=Token.Text)
+                     > (0,0,0,1,2) (pygments)Token.Text
+                Token('setting', type=Token.Name)
+                     > (0,0,0,1,2) (pygments)Token.Name
+                Token(' ', type=Token.Text)
+                     > (0,0,0,1,2) (pygments)Token.Text
+                Token('INSTALLED_APPS', type=Token.Name)
+                     > (0,0,0,1,2) (pygments)Token.Name
+                Token(',', type=Token.Punctuation)
+                     > (0,0,0,1,2) (pygments)Token.Punctuation
+                Token(' ', type=Token.Text)
+                     > (0,0,0,1,2) (pygments)Token.Text
+                Token('but', type=Token.Name)
+                     > (0,0,0,1,2) (pygments)Token.Name
+                Token(' ', type=Token.Text)
+                     > (0,0,0,1,2) (pygments)Token.Text
+                Token('settings', type=Token.Name)
+                     > (0,0,0,1,2) (pygments)Token.Name
+                Token(' ', type=Token.Text)
+                     > (0,0,0,1,2) (pygments)Token.Text
+                Token('are', type=Token.Name)
+                     > (0,0,0,1,2) (pygments)Token.Name
+                Token(' ', type=Token.Text)
+                     > (0,0,0,1,2) (pygments)Token.Text
+                Token('not', type=Token.Operator.Word)
+                     > (0,0,0,1,2) (pygments)Token.Operator.Word
+                Token(' ', type=Token.Text)
+                     > (0,0,0,1,2) (pygments)Token.Text
+                Token('configured', type=Token.Name)
+                     > (0,0,0,1,2) (pygments)Token.Name
+                Token('.', type=Token.Operator)
+                     > (0,0,0,1,2) (pygments)Token.Operator
+                Token(' ', type=Token.Text)
+                     > (0,0,0,1,2) (pygments)Token.Text
+                Token('You', type=Token.Name)
+                     > (0,0,0,1,2) (pygments)Token.Name
+                Token(' ', type=Token.Text)
+                     > (0,0,0,1,2) (pygments)Token.Text
+                Token('must', type=Token.Name)
+                     > (0,0,0,1,2) (pygments)Token.Name
+                Token(' ', type=Token.Text)
+                     > (0,0,0,1,2) (pygments)Token.Text
+                Token('either', type=Token.Name)
+                     > (0,0,0,1,2) (pygments)Token.Name
+                Token(' ', type=Token.Text)
+                     > (0,0,0,1,2) (pygments)Token.Text
+                Token('define', type=Token.Name)
+                     > (0,0,0,1,2) (pygments)Token.Name
+                Token(' ', type=Token.Text)
+                     > (0,0,0,1,2) (pygments)Token.Text
+                Token('the', type=Token.Name)
+                     > (0,0,0,1,2) (pygments)Token.Name
+                Token(' ', type=Token.Text)
+                     > (0,0,0,1,2) (pygments)Token.Text
+                Token('environment', type=Token.Name)
+                     > (0,0,0,1,2) (pygments)Token.Name
+                Token(' ', type=Token.Text)
+                     > (0,0,0,1,2) (pygments)Token.Text
+                Token('variable', type=Token.Name)
+                     > (0,0,0,1,2) (pygments)Token.Name
+                Token(' ', type=Token.Text)
+                     > (0,0,0,1,2) (pygments)Token.Text
+                Token('DJANGO_SETTINGS_MODULE', type=Token.Name)
+                     > (0,0,0,1,2) (pygments)Token.Name
+                Token(' ', type=Token.Text)
+                     > (0,0,0,1,2) (pygments)Token.Text
+                Token('or', type=Token.Operator.Word)
+                     > (0,0,0,1,2) (pygments)Token.Operator.Word
+                Token(' ', type=Token.Text)
+                     > (0,0,0,1,2) (pygments)Token.Text
+                Token('call', type=Token.Name)
+                     > (0,0,0,1,2) (pygments)Token.Name
+                Token(' ', type=Token.Text)
+                     > (0,0,0,1,2) (pygments)Token.Text
+                Token('settings', type=Token.Name)
+                     > (0,0,0,1,2) (pygments)Token.Name
+                Token('.', type=Token.Operator)
+                     > (0,0,0,1,2) (pygments)Token.Operator
+                Token('configure', type=Token.Name)
+                     > (0,0,0,1,2) (pygments)Token.Name
+                Token('()', type=Token.Punctuation)
+                     > (0,0,0,1,2) (pygments)Token.Punctuation
+                Token(' ', type=Token.Text)
+                     > (0,0,0,1,2) (pygments)Token.Text
+                Token('before', type=Token.Name)
+                     > (0,0,0,1,2) (pygments)Token.Name
+                Token(' ', type=Token.Text)
+                     > (0,0,0,1,2) (pygments)Token.Text
+                Token('accessing', type=Token.Name)
+                     > (0,0,0,1,2) (pygments)Token.Name
+                Token(' ', type=Token.Text)
+                     > (0,0,0,1,2) (pygments)Token.Text
+                Token('settings', type=Token.Name)
+                     > (0,0,0,1,2) (pygments)Token.Name
+                Token('.', type=Token.Operator)
+                     > (0,0,0,1,2) (pygments)Token.Operator
+                Token('\n', type=Token.Text)
+                     > (0,0,0,1,2) (pygments)Token.Text
+              Paragraph('if you get ModuleNotFoundError, ...')   /home/venom/SatheeshKumar/Django-Easy/docs_src/source/overview.rst:40 <paragraph>
+                   > (0,0,0,0,2) body
+                MixedStyledText('if you get ModuleNotFoundError, ...')
+                  SingleStyledText('if you get ModuleNotFoundError, ...')
+#### DownExpandingContainer('footer')
+  StaticGroupedFlowables()
+    Footer('		3')
+         > (0,0,0,0,2) footer
+           (0,0,0,0,1) body
+      MixedStyledText('		3')
+        Tab('	')
+        Tab('	')
+        Field('3')
+          SingleStyledText('3')
+---------------------------------- page 5 ----------------------------------
+#### FootnoteContainer('footnotes')
+  StaticGroupedFlowables()
+#### DownExpandingContainer('floats')
+  StaticGroupedFlowables()
+#### ChainedContainer('column1')
+  StaticGroupedFlowables()
+    StaticGroupedFlowables()
+#### ChainedContainer('column2')
+  StaticGroupedFlowables()
+    StaticGroupedFlowables()
+#### DownExpandingContainer('footer')
+  StaticGroupedFlowables()
+    Footer('		5')
+         > (0,0,0,0,2) footer
+           (0,0,0,0,1) body
+      MixedStyledText('		5')
+        Tab('	')
+        Tab('	')
+        Field('5')
+          SingleStyledText('5')

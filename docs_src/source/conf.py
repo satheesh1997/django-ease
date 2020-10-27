@@ -18,7 +18,7 @@ import django
 
 sys.path.insert(0, os.path.abspath('../../'))
 
-os.environ['DJANGO_SETTINGS_MODULE'] = 'docs.django_settings'
+os.environ['DJANGO_SETTINGS_MODULE'] = 'docs_src.django_settings'
 django.setup()
 
 
