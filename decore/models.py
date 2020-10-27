@@ -3,22 +3,11 @@ This file contains all the abstract models that can make
 a django developers work easy.
 """
 
-from django.db.signals import post_save
 from django.db import models
-from django.dispatch import receiver
 from django.template.defaultfilters import slugify
 
 
-class AbstractModel(models.Model):
-    """
-    Abstract model base that can be inherited to create an
-    abstract model.
-    """
-    class Meta:
-        abstract = True
-
-
-class TimeStamps(AbstractModel):
+class TimeStamps(models.Model):
     """
     Abstract model that can be inherited to have the timestamp
     fields (created_at & updated_at) in the model.
@@ -31,23 +20,27 @@ class TimeStamps(AbstractModel):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
+    class Meta:
+        abstract = True
 
-class UniqueSlug(AbstractModel):
+
+class UniqueSlug(models.Model):
     """
     Abstract model that can be inherited to have a unique slug field
     in the model.
 
     When inhertied will check for slug_from attribute in the model,
-    by default slug_from will have value title.
+    by default SLUG_FROM will have value title.
 
     """
+    SLUG_FROM = 'title'
     slug = models.SlugField(max_length=200, db_index=True, unique=True)
 
-    class Meta(AbstractModel.Meta):
-        slug_from = 'title'
+    class Meta:
+        abstract = True
 
     def _generate_slug(self):
-        title = getattr(self, self.Meta.slug_from)
+        title = getattr(self, self.SLUG_FROM)
 
         if title:
             new_slug = slugify(title)
@@ -60,29 +53,31 @@ class UniqueSlug(AbstractModel):
             self.save()
 
 
-class Slug(AbstractModel):
+class Slug(models.Model):
     """
     Abstract model that can be inherited to have a slug field
     in the model.
 
     When inhertied will check for slug_from attribute in the model,
-    by default slug_from will have value title.
+    by default SLUG_FROM will have value title.
 
     """
+    SLUG_FROM = 'title'
+
     slug = models.SlugField(max_length=200, db_index=True)
 
-    class Meta(AbstractModel.Meta):
-        slug_from = 'title'
+    class Meta:
+        abstract = True
 
     def _generate_slug(self):
-        title = getattr(self, self.Meta.slug_from)
+        title = getattr(self, self.SLUG_FROM)
 
         if title:
             self.slug = slugify(title)
             self.save()
 
 
-class Hidden(AbstractModel):
+class Hidden(models.Model):
     """
     Abstact model that can be inhertied to have hide functionality
     in a model using is_hidden field.
@@ -90,6 +85,9 @@ class Hidden(AbstractModel):
     Use .hide() to hide and .unhide() to unhide an object.
     """
     is_hidden = models.BooleanField(default=False, db_index=True)
+
+    class Meta:
+        abstract = True
 
     def hide(self):
         """

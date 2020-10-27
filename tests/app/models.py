@@ -1,3 +1,16 @@
-from django.db import models
+from decore import models
 
-# Create your models here.
+
+class TimeStampsModel(models.TimeStamps):
+    pass
+
+class HiddenModel(models.Hidden):
+    pass
+
+
+class  SlugModel(models.Slug):
+    pass
+
+
+class UniqueSlugModel(models.UniqueSlug):
+    pass
