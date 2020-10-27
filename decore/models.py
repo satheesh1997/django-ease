@@ -34,7 +34,9 @@ class UniqueSlug(models.Model):
 
     """
     SLUG_FROM = 'title'
+
     slug = models.SlugField(max_length=200, db_index=True, unique=True)
+    title = models.CharField(max_length=200)
 
     class Meta:
         abstract = True
@@ -44,13 +46,18 @@ class UniqueSlug(models.Model):
 
         if title:
             new_slug = slugify(title)
+
+            if self.slug == new_slug:
+                return
+
             slug_exists = self.__class__.objects.filter(slug=new_slug).exists()
 
             if slug_exists:
                 new_slug = "{}-{}".format(new_slug, self.id)
 
-            self.slug = new_slug
-            self.save()
+            if self.slug != new_slug:
+                self.slug = new_slug
+                self.save()
 
 
 class Slug(models.Model):
@@ -65,6 +72,7 @@ class Slug(models.Model):
     SLUG_FROM = 'title'
 
     slug = models.SlugField(max_length=200, db_index=True)
+    title = models.CharField(max_length=200)
 
     class Meta:
         abstract = True
@@ -73,8 +81,11 @@ class Slug(models.Model):
         title = getattr(self, self.SLUG_FROM)
 
         if title:
-            self.slug = slugify(title)
-            self.save()
+            new_slug = slugify(title)
+
+            if self.slug != new_slug:
+                self.slug = new_slug
+                self.save()
 
 
 class Hidden(models.Model):
