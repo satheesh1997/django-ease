@@ -11,3 +11,4 @@ Django Ease is a python package that contains most commonly used modules in djan
    :maxdepth: 2
 
    overview
+   modules

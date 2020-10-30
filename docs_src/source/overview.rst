@@ -21,15 +21,15 @@ Package installation
 **********************
 **decore** package can be installed from the PyPi server directly into any of the supported python environments using,
 
-.. code-block:: sh
+.. code-block:: console
 
-   pip install django-easy
+   $ pip install django-easy
 
 Once the above command is completed you can check if the package is installed properly using,
 
-.. code-block:: sh
+.. code-block:: console
 
-   python -m "import decore"
+   $ python -m "import decore"
 
 the above command should give the below exception in your python shell
 

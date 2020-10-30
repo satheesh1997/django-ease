@@ -1,6 +1,5 @@
 """
-This file contains all the abstract models that can make
-a django developers work easy.
+These are the development ready abstract models that are available inside decore package.
 """
 
 from django.db import models
@@ -9,13 +8,14 @@ from django.template.defaultfilters import slugify
 
 class TimeStamps(models.Model):
     """
-    Abstract model that can be inherited to have the timestamp
-    fields (created_at & updated_at) in the model.
+    Abtract model that can be inherited to track when an object was created or 
+    it was last updated.
 
-    The created_at field gives the datetime in which the object
-    is added.
-    The updated_at field gives the datetime is which the object
-    is last updated.
+    ``created_at`` stores the datetime in which the object was created
+
+    ``updated_at`` stores the datetime in which the object was last updated
+
+    Both these fields are auto updated with their values on object creation and updation.
     """
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
@@ -26,11 +26,8 @@ class TimeStamps(models.Model):
 
 class UniqueSlug(models.Model):
     """
-    Abstract model that can be inherited to have a unique slug field
-    in the model.
-
-    When inhertied will check for slug_from attribute in the model,
-    by default SLUG_FROM will have value title.
+    Abstract model that can be inherited to have a unique slug field. The slug will be
+    generated from the field name you provide in ``SLUG_FROM`` attribute.
 
     """
     SLUG_FROM = 'title'

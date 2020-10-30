@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modules &#8212; Django Ease 1.0.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Overview" href="overview.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="modules">
+<h1>Modules<a class="headerlink" href="#modules" title="Permalink to this headline">¶</a></h1>
+<p>In this section we will know about all the modules that are availabe in decore package</p>
+<div class="section" id="module-decore.models">
+<span id="models"></span><h2>Models<a class="headerlink" href="#module-decore.models" title="Permalink to this headline">¶</a></h2>
+<p>These are the development ready abstract models that are available inside decore package.</p>
+<dl class="py class">
+<dt id="decore.models.Hidden">
+<em class="property">class </em><code class="sig-prename descclassname">decore.models.</code><code class="sig-name descname">Hidden</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/decore/models.html#Hidden"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decore.models.Hidden" title="Permalink to this definition">¶</a></dt>
+<dd><p>Abstact model that can be inhertied to have hide functionality
+in a model using is_hidden field.</p>
+<p>Use .hide() to hide and .unhide() to unhide an object.</p>
+<dl class="py method">
+<dt id="decore.models.Hidden.hide">
+<code class="sig-name descname">hide</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/decore/models.html#Hidden.hide"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decore.models.Hidden.hide" title="Permalink to this definition">¶</a></dt>
+<dd><p>hides the object if its not hidden</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="decore.models.Hidden.unhide">
+<code class="sig-name descname">unhide</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/decore/models.html#Hidden.unhide"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decore.models.Hidden.unhide" title="Permalink to this definition">¶</a></dt>
+<dd><p>unhide the objects if its hidden</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="decore.models.Slug">
+<em class="property">class </em><code class="sig-prename descclassname">decore.models.</code><code class="sig-name descname">Slug</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/decore/models.html#Slug"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decore.models.Slug" title="Permalink to this definition">¶</a></dt>
+<dd><p>Abstract model that can be inherited to have a slug field
+in the model.</p>
+<p>When inhertied will check for slug_from attribute in the model,
+by default SLUG_FROM will have value title.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="decore.models.TimeStamps">
+<em class="property">class </em><code class="sig-prename descclassname">decore.models.</code><code class="sig-name descname">TimeStamps</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/decore/models.html#TimeStamps"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decore.models.TimeStamps" title="Permalink to this definition">¶</a></dt>
+<dd><p>Abtract model that can be inherited to track when an object was created or 
+it was last updated.</p>
+<p><code class="docutils literal notranslate"><span class="pre">created_at</span></code> stores the datetime in which the object was created</p>
+<p><code class="docutils literal notranslate"><span class="pre">updated_at</span></code> stores the datetime in which the object was last updated</p>
+<p>Both these fields are auto updated with their values on object creation and updation.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="decore.models.UniqueSlug">
+<em class="property">class </em><code class="sig-prename descclassname">decore.models.</code><code class="sig-name descname">UniqueSlug</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/decore/models.html#UniqueSlug"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decore.models.UniqueSlug" title="Permalink to this definition">¶</a></dt>
+<dd><p>Abstract model that can be inherited to have a unique slug field. The slug will be
+generated from the field name you provide in <code class="docutils literal notranslate"><span class="pre">SLUG_FROM</span></code> attribute.</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Modules</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-decore.models">Models</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="overview.html" title="previous chapter">Overview</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Satheesh Kumar.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.2.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/modules.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
